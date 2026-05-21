@@ -1,4 +1,9 @@
-# 30-Day AI & Software Development Learning Journey
+
+This is a tailored course I asked Cursor to design for me to help me learn the AI-foundations, with a good mix of theory and hands-on exercises, perfect for a 30 min daily practice.
+I was surprised by the the quality of the content and how fun it was to complete the full course.
+
+
+# AI & Software Development Learning Journey
 
 Welcome to your comprehensive AI learning adventure! This repository will be your companion throughout the 30-day journey.
 
