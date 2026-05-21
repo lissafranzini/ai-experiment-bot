@@ -1,6 +1,6 @@
 
 This is a tailored course I asked Cursor to design for me to help me learn the AI-foundations, with a good mix of theory and hands-on exercises, perfect for a 30 min daily practice.
-I was surprised by the the quality of the content and how fun it was to complete the full course.
+I was surprised by the quality of the content and how fun it was to complete the journey!
 
 
 # AI & Software Development Learning Journey
