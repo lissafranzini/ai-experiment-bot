@@ -1,0 +1,15 @@
+# Week 2 Dependencies - Software Engineering Foundations
+pytest==8.3.3          # Testing framework
+black==24.8.0           # Code formatting
+flake8==7.1.1          # Code linting
+mypy==1.11.2           # Type checking
+coverage==7.6.1        # Test coverage
+pre-commit==3.8.0      # Git hooks
+
+# Development tools
+ipython==8.27.0        # Interactive Python shell
+jupyter==1.1.1         # Notebooks for experimentation
+
+# Project structure
+setuptools==75.1.0     # Package management
+wheel==0.44.0          # Package building

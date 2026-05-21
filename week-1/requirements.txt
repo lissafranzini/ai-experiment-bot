@@ -1,0 +1,8 @@
+# Week 1 Dependencies - AI Fundamentals
+openai==1.51.0
+python-dotenv==1.0.1
+requests==2.31.0
+
+# Optional utilities
+rich==13.7.1  # Pretty console output
+click==8.1.7  # Command line interfaces

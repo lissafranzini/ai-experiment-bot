@@ -1,0 +1,27 @@
+# Week 5 Dependencies - Advanced Topics & Capstone
+redis==5.1.1           # Caching and sessions
+celery==5.4.0          # Background tasks
+gunicorn==23.0.0       # Production WSGI server
+
+# Performance & Monitoring
+psutil==6.0.0          # System monitoring
+memory-profiler==0.61.0  # Memory usage tracking
+line-profiler==4.1.3   # Line-by-line profiling
+
+# Advanced AI
+langchain==0.3.3       # AI application framework (optional)
+chromadb==0.5.15       # Vector database (optional)
+
+# Production deployment
+docker==7.1.0          # Container management
+python-dotenv==1.0.1   # Environment management
+pydantic==2.9.2        # Data validation
+
+# Testing & Quality
+pytest-asyncio==0.24.0  # Async testing
+pytest-mock==3.14.0     # Mocking
+locust==2.32.1          # Load testing
+
+# Documentation
+mkdocs==1.6.1          # Documentation generator
+mkdocs-material==9.5.39  # Material theme
