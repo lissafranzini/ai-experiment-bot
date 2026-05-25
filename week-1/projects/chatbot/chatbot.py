@@ -14,6 +14,11 @@ while True:
             chat_history = []
             print ("Chat history erased!")
 
+        elif question == "help":
+            print ("use \"quit\" to exit the chat")
+            print ("use \"clear\" to clear chat history")
+        
+
         else:
 
             user_message = {"role": "user", "parts": [{"text": question}]}
