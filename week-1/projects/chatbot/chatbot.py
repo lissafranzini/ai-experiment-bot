@@ -3,7 +3,7 @@ from ai_client import client, handle_client_error, ai_client
 chat_history = []
 
 print("Welcome to your chatbot script!")
-print("Type your question to as something, \"clear\" to clean the chat history, and \"quit\" to exit")
+print("Type your question to ask something, \"clear\" to clean the chat history, and \"quit\" to exitgit")
 
 while True:
     try:
