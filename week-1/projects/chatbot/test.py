@@ -1,9 +1,50 @@
-from config import Config
-from chatbot import Chatbot  # adjust based on your file/class names
+from unittest.mock import patch, MagicMock
+from config import MODEL, SYSTEM_INSTRUCTION, TEMPERATURE
+from chatbot import Chatbot 
+
+
+def test_model_is_set():
+    assert MODEL is not None
+    assert isinstance(MODEL, str)
+
+def test_temperature_is_valid():
+    assert isinstance(TEMPERATURE, float)
+    assert 0.0 <= TEMPERATURE <= 2.0
+
+def test_system_instruction_is_set():
+    assert SYSTEM_INSTRUCTION is not None
+    assert len(SYSTEM_INSTRUCTION) > 0
 
 def test_conversation_starts_empty():
-    # Your test here: create a chatbot and check that history is empty
-    pass
-def test_clear_resets_history():
-    # Your test here: add something to history, clear it, verify it's empty
-    pass
+    bot = Chatbot()
+    assert bot.chat_history == []
+
+def test_clear_history():
+    bot = Chatbot()
+    bot.chat_history = ["message"]
+    bot.clear_history()
+    assert bot.chat_history == []
+
+def test_help():
+    bot = Chatbot()
+    result = bot.process_input("help")
+    assert result == "help"
+
+def test_process_input_sends_message_to_ai():
+    bot = Chatbot()
+    
+    fake_response = MagicMock()
+    fake_response.text = "Hello! I'm a fake AI response."
+    
+
+    with patch("chatbot.ai_client", return_value=fake_response) as mock_ai:
+        result = bot.process_input("Hi there")
+    
+    assert result == "Hello! I'm a fake AI response."
+    
+
+    mock_ai.assert_called_once()
+    
+    assert len(bot.chat_history) == 2  
+    assert bot.chat_history[0]["role"] == "user"
+    assert bot.chat_history[1]["role"] == "model"
