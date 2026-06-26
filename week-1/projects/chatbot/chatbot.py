@@ -27,37 +27,38 @@ class Chatbot:
 
             return response.text
 
-    
-bot = Chatbot()
-print("Welcome to your chatbot script!")
-print("Type your question to ask something, \"clear\" to clean the chat history, and \"quit\" to exit")
 
-while True:
-    try:
-        prompt = input("What's your question?").strip()
-        result = bot.process_input(prompt)
+if __name__ == "__main__":
+    bot = Chatbot()
+    print("Welcome to your chatbot script!")
+    print("Type your question to ask something, \"clear\" to clean the chat history, and \"quit\" to exit")
 
-        if result == "quit":
-            print ("Bye!")
-            break
-        
-        elif result == "clear":
-            bot.clear_history()
-            print ("Chat history erased!")
+    while True:
+        try:
+            prompt = input("What's your question?").strip()
+            result = bot.process_input(prompt)
 
-        elif result == "help":
-            print ("use \"quit\" to exit the chat")
-            print ("use \"clear\" to clear chat history")
+            if result == "quit":
+                print("Bye!")
+                break
 
-        else:         
-            print (result)
-            print("\n")
+            elif result == "clear":
+                bot.clear_history()
+                print("Chat history erased!")
 
-    except Exception as e:
-        if handle_client_error(e) == "quota exceeded":
-            break
-        else:
-            print ("something went wrong!")
-            print (e)
+            elif result == "help":
+                print("use \"quit\" to exit the chat")
+                print("use \"clear\" to clear chat history")
+
+            else:
+                print(result)
+                print("\n")
+
+        except Exception as e:
+            if handle_client_error(e) == "quota exceeded":
+                break
+            else:
+                print("something went wrong!")
+                print(e)
 
 

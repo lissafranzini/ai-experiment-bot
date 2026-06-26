@@ -36,7 +36,7 @@ def test_process_input_sends_message_to_ai():
     fake_response = MagicMock()
     fake_response.text = "Hello! I'm a fake AI response."
     
-
+#Temporarily replaces the actual ai client with my mock
     with patch("chatbot.ai_client", return_value=fake_response) as mock_ai:
         result = bot.process_input("Hi there")
     
